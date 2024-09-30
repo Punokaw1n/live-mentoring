@@ -14,11 +14,16 @@ submitButton.addEventListener("click", gantiWarna);
 function gantiWarna(event) {
   event.preventDefault();
 
+  const name = document.getElementById("name").value;
+  const skillPilihan = document.getElementById("skill").value;
   const selectedSkill = skillSelect.value;
-
+  console.log(name);
   console.log("Fungsi gantiWarna dipanggil!");
-  console.log("Skill yang dipilih:", selectedSkill);
 
+  console.log("Skill yang dipilih:", selectedSkill);
+  skillKamu.textContent = `hello ${name} skill kamu ${skillPilihan}`;
+
+  console.log(footer);
   if (selectedSkill === "CSS") {
     btn.style.backgroundColor = "pink";
     btn1.style.color = "pink";
